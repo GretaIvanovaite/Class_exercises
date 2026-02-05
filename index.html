@@ -16,6 +16,284 @@
     <title>TechGear Pro | Wireless Headphones</title>
 </head>
 <body>
-    <!-- Content will be added progressively -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header class="site-header">
+        <nav class="primary-nav" aria-label="Primary navigation">
+            <a href="/" class="logo" aria-label="TechGear Pro Home">
+                <span class="logo-icon" aria-hidden="true">⚡</span>
+                <span class="logo-text">TechGear<strong>Pro</strong></span>
+            </a>
+ 
+            <ul class="nav-links" role="list">
+                <li><a href="/products">Products</a></li>
+                <li><a href="/deals">Deals</a></li>
+                <li><a href="/support">Support</a></li>
+            </ul>
+ 
+            <div class="nav-actions">
+                <button type="button" class="icon-btn" aria-label="Search products">
+                    <span aria-hidden="true">🔍</span>
+                </button>
+                <button type="button" class="icon-btn cart-btn" aria-label="Shopping cart, 3 items">
+                    <span aria-hidden="true">🛒</span>
+                    <span class="cart-count">3</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+ 
+    <main id="main-content">
+        <article class="product-page">
+            <nav aria-label="Breadcrumb" class="readcrumb">
+                <ol role="list">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/audio">Audio</a></li>
+                    <li><a href="/headphones">Headphones</a></li>
+                    <li aria-current="page">ProSound X500</li>
+                </ol>
+            </nav>
+            <div class="product-layout">
+                <section class="product-gallery" aria-label="Product images">
+                    <figure class="main-image">
+                        <picture>
+                            <!--WebP format for modern browsers-->
+                            <source
+                                srcset="images/headphones-large.webp 1200w,
+                                    images/headphones-medium.webp 800w,
+                                    images/headphones-small.webp 400w"
+                                sizes="(min-width: 1024px) 50vw, 100vw"
+                                type="image/webp">
+                            <!--JPEG fallback-->
+                            <img
+                                src="images/headphone-medium.jpg"
+                                alt="ProSound X500 wireless headphones in midnight featuring premium over-ear cushions and aluminium accents"
+                                loading="eager"
+                                decoding="async"
+                                width="800"
+                                height="600">
+                        </picture>
+                        <figcaption class="visually-hidden">ProSound X500 product photograph</figcaption>
+                    </figure>
+                    <div class="thumbnail-strip" role="group" aria-label="Product image thumbnails">
+                        <button type="button" class="thumbnail active" aria-pressed="true" aria-label="View main product image">
+                            <img src="images/thumb-1.jpg" alt="" loading="lazy" width="80" height="60">
+                        </button>
+                        <button type="button" class="thumbnail" aria-pressed="true" aria-label="View side profile">
+                            <img src="images/thumb-2.jpg" alt="" loading="lazy" width="80" height="60">
+                        </button>
+                        <button type="button" class="thumbnail" aria-pressed="true" aria-label="View ear cushion detail">
+                            <img src="images/thumb-3.jpg" alt="" loading="lazy" width="80" height="60">
+                        </button>
+                        <button type="button" class="thumbnail" aria-pressed="true" aria-label="View folded position">
+                            <img src="images/thumb-4.jpg" alt="" loading="lazy" width="80" height="60">
+                        </button>
+                    </div>
+                </section>
+                <section class="product-info" aria-label="Product details">
+                    <header class="product-header">
+                        <p class="product-brand">ProSound Audio</p>
+                        <h1 class="product-title">X500 Wireless Headphones</h1>
+                        <div class="product-rating">
+                            <div class="stars" role="img" aria-label="4.5 out of 5 stars">
+                                <span aria-hidden="true">★★★★☆</span>
+                            </div>
+                            <a href="#reviews" class="review-count">2,847</a>
+                        </div>
+                    </header>
+
+                    <div class="product-pricing">
+                        <p class="price-current">
+                            <span class="visually-hidden">Current price:</span>£299.99
+                        </p>
+                        <p class="price-original">
+                            <span class="visually-hidden">Original price:</span>£399.99
+                        </p>
+                        <p class="price-saving">Save £100</p>
+                    </div>
+                    <!--The details element for expandable content-->
+                    <details class="product-description" open>
+                        <summary>Product Description</summary>
+                        <p>Experience audio perfection with the ProSound X500. Featuring 40mm custom drivers, active noice cancellation, and up to 30 hours of battery life, these headphones deliver studio-quality sound wherever you go.</p>
+                    </details>
+                    <form class="product-form" aria-label="Product options">
+                        <fieldset class="option-group">
+                            <legend>Select Colour</legend>
+                            <div class="colour-option">
+                                <label class="colour-option">
+                                    <input type="radio" name="colour" value="black" checked>
+                                    <span class="colour-swatch" style="--swatch-colour: #1a1a2e" aria-label="Midnight Black"></span>
+                                </label>
+                                <label class="colour-option">
+                                    <input type="radio" name="colour" value="silver">
+                                    <span class="colour-swatch" style="--swatch-colour: #c0c0c0" aria-label="Arctic Silver"></span>
+                                </label>
+                                <label class="colour-option">
+                                    <input type="radio" name="colour" value="blue">
+                                    <span class="colour-swatch" style="--swatch-colour: #16213e" aria-label="Navy Blue"></span>
+                                </label>
+                            </div>
+                        </fieldset>
+                        <div class="quantity-selector">
+                            <label for="quantity">Quantity</label>
+                            <div class="quantity-input">
+                                <button type="button" class="qty-btn" aria-label="Decrease quantity">-</button>
+                                <input type="number" id="quantity" name="quantity"
+                                    value="1" min="1" max="10" aria-describedby="stock-status">
+                                <button type="button" class="qty-btn" aria-label="Increase quantity">+</button>
+                            </div>
+                            <p id="stock-status" class="stock-info">
+                                <span class="stock-indicator in-stock"></span>
+                                In stock - dispatches within 24 hours
+                            </p>
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary add-to-cart">
+                                <span class="btn-text">Add to Basket</span>
+                                <span class="btn-icon" aria-hidden="true">→</span>
+                            </button>
+                            <button type="button" class="btn btn-secondary wishlist-btn" aria-label="Add to wishlist">
+                                <span aria-hidden="true">♡</span>
+                            </button>
+                        </div>
+                    </form>
+                </section>
+            </div>
+
+            <!--Product features using modern HTML5 elements-->
+            <section class="product-features" aria-labelledby="features-heading">
+                <h2 id="features-heading" class="section-title">Key features</h2>
+                <div class="features-grid">
+                    <article class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">🎵</div>
+                        <h3>Hi-Res Audio</h3>
+                        <p>40mm custom neodymium drivers deliver exceptional clarity acrss the entire frequency range.</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">🔇</div>
+                        <h3>Active Noise Cancellation</h3>
+                        <p>Advanced ANC technology blocks out ambient noise for immersive listening.</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">🔋</div>
+                        <h3>30-Hour Battery</h3>
+                        <p>Extended playtime with quick charge: 5 minutes provides 3 hours of listening.</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">📱</div>
+                        <h3>Multi-Device Connect</h3>
+                        <p>Seamlessly switch between two connected devices with Bluetooth 5.3.</p>
+                    </article>
+                </div>
+            </section>
+
+            <!--Specification using the dialog element-->
+            <section class="product-specs" aria-labelledby="specs-heading">
+                <h2 id="specs-heading" class="section-title">Technical Specifications</h2>
+                <button type="button" class="btn btn-outline" id="open-specs-dialog">
+                    View Full Specifications
+                </button>
+                <dialog id="specs-dialog" aria-labelledby="dialog-title">
+                    <header class="dialog-header">
+                        <h3 id="dialog-title">Full Specifications</h3>
+                        <button type="button" class="close-dialog" aria-label="Close specifications">×</button>
+                    </header>
+                    <div class="dialog-content">
+                        <dl class="specs-list">
+                            <div class="spec-item">
+                                <dt>Driver Size</dt>
+                                <dd>40mm Neodymium</dd>
+                            </div>
+                            <div class="spec-item">
+                                <dt>Frequency Response</dt>
+                                <dd>4Hz - 40kHz</dd>
+                            </div>
+                            <div class="spec-item">
+                                <dt>Impedance</dt>
+                                <dd>32 Ohms</dd>
+                            </div>
+                            <div class="spec-item">
+                                <dt>Battery Life</dt>
+                                <dd>30 hours (ANC on) / 40 hours (ANC off)</dd>
+                            </div>
+                            <div class="spec-item">
+                                <dt>Charging Time</dt>
+                                <dd>2 hours (USB-C)</dd>
+                            </div>
+                            <div class="spec-item">
+                                <dt>Bluetooth Version</dt>
+                                <dd>5.3 with aptX HD, LDAC, AAC</dd>
+                            </div>
+                            <div class="spec-item">
+                                <dt>Weight</dt>
+                                <dd>254g</dd>
+                            </div>
+                        </dl>
+                    </div>
+                    <footer class="dialog-footer">
+                        <button type="button" class="btn btn-primary" onclick="document.getElementById('specs-dialog').close()">
+                            Close
+                        </button>
+                    </footer>
+                </dialog>
+            </section>
+
+            <!--Reviews section with meter element-->
+            <section id="reviews" class="product-reviews" aria-labelledby="reviews-heading">
+                <h2 id="reviews-heading" class="section-title">Customer Reviews</h2>
+                <div class="reviews-summary">
+                    <div class="rating-overview">
+                        <p class="average-rating">4.5</p>
+                        <div class="stars" role="img" aria-label="4.5 out of 5 stars">★★★★☆</div>
+                        <p class="total-reviews">Based on 2,847 reviews</p>
+                    </div>
+                    <div class="rating-breakdown">
+                        <div class="rating-bar">
+                            <span class="rating-label">5 stars</span>
+                            <meter value="0.68" min="0" max="1" aria-label="68% of reviews are 5 stars">68%</meter>
+                            <span class="rating-percent">68%</span>
+                        </div>
+                        <div class="rating-bar">
+                            <span class="rating-label">4 stars</span>
+                            <meter value="0.22" min="0" max="1" aria-label="22% of reviews are 4 stars">22%</meter>
+                            <span class="rating-percent">22%</span>
+                        </div>
+                        <div class="rating-bar">
+                            <span class="rating-label">3 stars</span>
+                            <meter value="0.06" min="0" max="1" aria-label="6% of reviews are 3 stars">6%</meter>
+                            <span class="rating-percent">6%</span>
+                        </div>
+                        <div class="rating-bar">
+                            <span class="rating-label">2 stars</span>
+                            <meter value="0.03" min="0" max="1" aria-label="3% of reviews are 2 stars">3%</meter>
+                            <span class="rating-percent">3%</span>
+                        </div>
+                        <div class="rating-bar">
+                            <span class="rating-label">1 star</span>
+                            <meter value="0.01" min="0" max="1" aria-label="1% of reviews are 1 star">1%</meter>
+                            <span class="rating-percent">1%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="reviews-list">
+                    <article class="review-card">
+                        <header class="review-header">
+                            <div class="stars" role="img" aria-label="5 out of 5 stars">★★★★★</div>
+                            <time datetime="2026-01-15">15 January 2026</time>
+                        </header>
+                        <h4 class="review-title">Best headphones I've ever owned</h4>
+                        <p class="review-body">The sound quality is phenomenal, and the noise cancellation is incredibly effective. Bettery life exceeds expectations. Highly recommend!</p>
+                        <footer class="review-footer">
+                            <p class="reviewer-name">Sarah M.</p>
+                            <p class="verified-purchase">✓ Verified Purchase</p>
+                        </footer>
+                    </article>
+                </div>
+            </section>
+        </article>
+    </main>
+ 
+    <footer class="site-footer">
+        <p>&copy; 2026 TechGear Pro. All rights reserved.</p>
+    </footer>
 </body>
 </html>
