@@ -531,6 +531,94 @@ button:focus-visible {
     }
 }
 
+
+
+/* ================================
+   Product cards - exercise 2
+   ================================ */
+ 
+/* Define the product-info section as a container */
+.product-cards {
+    container-type: inline-size;
+    container-name: product-cards;
+}
+ 
+/* Feature cards container */
+.card-grid {
+    container-type: inline-size;
+    container-name: products;
+ 
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+    padding: var(--space-6);
+}
+ 
+/* Container query: when features container is at least 500px */
+@container products (min-width: 500px) {
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+ 
+/* Container query: when features container is at least 800px */
+@container products (min-width: 800px) {
+    .card-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.product-card {
+    container-type: inline-size;
+    container-name: product-card;
+ 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    padding: var(--space-6);
+    background-color: white;
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-md);
+    transition: transform var(--duration-normal) var(--ease-out),
+                box-shadow var(--duration-normal) var(--ease-out);
+}
+ 
+.product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-xl);
+}
+ 
+.product-icon {
+    font-size: var(--font-size-3xl);
+    margin-block-end: var(--space-4);
+}
+ 
+.product-card h3 {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-semibold);
+    margin-block-end: var(--space-2);
+}
+ 
+.product-card p {
+    color: var(--colour-neutral-600);
+    font-size: var(--font-size-sm);
+}
+ 
+/* When the individual card has more space, switch to horizontal layout */
+@container feature-card (min-width: 300px) {
+    .feature-card {
+        flex-direction: row;
+        text-align: start;
+        gap: var(--space-4);
+    }
+ 
+    .feature-icon {
+        margin-block-end: 0;
+        flex-shrink: 0;
+    }
+}
+
 /* ================================
    MODERN SELECTORS
    ================================ */
@@ -1066,6 +1154,7 @@ button:focus-visible {
  
 .product-features,
 .product-specs,
+.product-cards,
 .product-reviews {
     margin-block-start: var(--space-16);
 }
